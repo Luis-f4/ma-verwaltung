@@ -1,6 +1,7 @@
 import UpdateButton from './UpdateButton';
 import Get from "./Get";
 import { useParams } from 'react-router-dom';
+import DeleteButton from './DeleteButton';
 
 
 const MaDetails = () => {
@@ -43,7 +44,7 @@ const MaDetails = () => {
                     abteilung={mitarbeiter?.abteilung} 
                 />
 
-                <button>Delete</button> 
+                <DeleteButton />
 
             </div>
             

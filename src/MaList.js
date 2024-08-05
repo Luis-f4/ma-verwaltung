@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const MaList = ({ mitarbeiter }) => {
     return ( 
         <div className="Ma-List">

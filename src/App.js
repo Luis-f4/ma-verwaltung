@@ -1,37 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
 import MaDetails from './MaDetails';
+import './index.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-
-    <div className="App">
-      <Navbar />
-      <div className="content">
-
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          
-          /* */ 
-          <Route path="/Ma/:id">
-            <MaDetails />
-          </Route>
-          /* */
-
-          <Route path="*">
-             <NotFound></NotFound>
-          </Route>
-
-        </Switch>
-
+      <div className="App">
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/ma-details/:id" element={<MaDetails />} />
+          </Routes>
+        </div>
       </div>
-
-
-    </div>
     </Router>
   );
 }

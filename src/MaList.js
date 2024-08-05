@@ -5,17 +5,22 @@ const MaList = ({ mitarbeiter }) => {
         <div className="Ma-List">
             {mitarbeiter.map((mitarbeiterItem) => {
                 let isMitarbeiterMarketing;
+                let test;
 
                 if(mitarbeiterItem.typeOfMitarbeiter === "Mitarbeiter"){
                     isMitarbeiterMarketing = "ist ein Mitarbeiter";
+                    test = ''
                 } else if(mitarbeiterItem.typeOfMitarbeiter === "MitarbeiterMarketing"){
                     isMitarbeiterMarketing = "ist im Marketing";
+                    test = 'marketing-';
                 } else {
                     isMitarbeiterMarketing = "Error";
                 }
 
                 return (
-                    <Link to={`/ma-details/${mitarbeiterItem.id}`} key={mitarbeiterItem.id}>
+                    
+                    <Link to={`/ma-${test}details/${mitarbeiterItem.id}`} key={mitarbeiterItem.id}>
+                        
 
                         <div className="Ma-List-nameMa-div info-div-maList">
                         <p id="testtt" className="Ma-List-nameMa">{mitarbeiterItem.name}</p>

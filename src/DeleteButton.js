@@ -1,14 +1,15 @@
-import { useNavigate } from 'react-router-dom'; // Importiere useNavigate statt useHistory
+import { useNavigate } from 'react-router-dom'; 
 import { useState } from 'react';
 
-const Delete = ({ mitarbeiterId, typeOfMA }) => {
-    const navigate = useNavigate(); // Verwende useNavigate statt useHistory
+const DeleteButton = ({ mitarbeiterId, typeOfMA }) => {
+    const navigate = useNavigate(); 
     const [isPending, setIsPending] = useState(false);
 
     const handleDelete = () => {
         setIsPending(true);
 
         let url = '';
+        alert("DeleteButton.js  typeOfMA: " + typeOfMA + "   DeleteButton.js  mitarbeiterId: " + mitarbeiterId);
         if (typeOfMA === "Mitarbeiter") {
             url = `http://localhost:8080/api/v1/Mitarbeiter/${mitarbeiterId}`;
         } else if (typeOfMA === "MitarbeiterMarketing") {
@@ -35,4 +36,4 @@ const Delete = ({ mitarbeiterId, typeOfMA }) => {
     );
 }
 
-export default Delete;
+export default DeleteButton;

@@ -44,7 +44,12 @@ const MaDetails = () => {
                     abteilung={mitarbeiter?.abteilung} 
                 />
 
-                <DeleteButton />
+                {mitarbeiter && (
+                    <DeleteButton 
+                        mitarbeiterId={mitarbeiter.id} 
+                        typeOfMA={mitarbeiter.typeOfMA}
+                    />
+                )}
 
             </div>
             

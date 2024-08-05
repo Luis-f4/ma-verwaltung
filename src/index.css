@@ -29,6 +29,7 @@ body {
 
 .site-title{
     font-size: 2rem;
+    
 }
 
 .nav ul {
@@ -37,8 +38,6 @@ body {
     list-style: none;
     display: flex;
     gap: 1rem;
-    
-
 
 }
 .nav a {
@@ -61,3 +60,19 @@ body {
     background-color: #777;
 }
 
+.ma-detais-div {
+    margin: 10%;
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    display: inline-block;
+
+}
+
+.ma-detais-div .ma-detais-title {
+    font-family: Arial, sans-serif;
+    
+}

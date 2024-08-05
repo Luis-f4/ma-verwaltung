@@ -16,10 +16,22 @@ const MaList = ({ mitarbeiter }) => {
 
                 return (
                     <Link to={`/ma-details/${mitarbeiterItem.id}`} key={mitarbeiterItem.id}>
-                        <p className="Ma-List-nameMa">{mitarbeiterItem.name}</p>
+
+                        <div className="Ma-List-nameMa-div info-div-maList">
+                        <p id="testtt" className="Ma-List-nameMa">{mitarbeiterItem.name}</p>
+                        </div>
+
+                        <div className="Ma-List-alterMa-div info-div-maList">
                         <p className="Ma-List-alterMa">{mitarbeiterItem.age}</p>
+                        </div>
+
+                        <div className="Ma-List-abteilungMa-div info-div-maList">
                         <p className="Ma-List-abteilungMa">{mitarbeiterItem.abteilung}</p>
+                        </div>
+
+                        <div className="Ma-List-istmarketing info-div-maList">
                         <p className="Ma-List-istmarketing">{isMitarbeiterMarketing}</p>
+                        </div>
                     </Link>
                 );
             })}

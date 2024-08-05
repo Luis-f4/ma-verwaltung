@@ -1,0 +1,71 @@
+/* Luis.css */
+
+.ueberschriften-Home{
+
+    /*background-color: aqua;*/
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3%;
+    margin-bottom: 2.5%;
+    border-bottom: 1px solid;
+    font-weight: 800;
+
+}
+
+.ueberschriften-Home p{
+    display: inline-block;
+}
+
+.Ma-List a {
+    display: block; /* Stellt sicher, dass der Rahmen das gesamte Link-Element umschließt */
+    border: black solid 1px;
+    padding: 10px; /* Optional: Abstand innerhalb des Rahmens */
+    margin-bottom: 10px; /* Optional: Abstand zwischen den Link-Elementen */
+    text-decoration: none; /* Entfernt die Standard-Unterstreichung des Links */
+    color: inherit; /* Erbt die Textfarbe von den Elternelementen */
+    background-color: rgb(253, 61, 61);
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+.Ma-List a p{
+
+    display: inline-block;
+    margin: 0 5% 0 5%;
+}
+
+.Ma-List-nameMa-div, .ueberschriften-Home-p-name-div{
+    /* background-color: chartreuse; */
+    border-right: 1px solid;
+}
+
+
+.info-div-maList, .ueberschriften-Home-p-div{
+    display: inline-block;
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    
+}
+
+.info-div-maList p{
+    font-size: 20px;
+}
+
+.Ma-List-istmarketing{
+
+    /* background-color: cornflowerblue; */
+   
+
+}
+
+.Ma-List-abteilungMa-div, .ueberschriften-Home-p-abteilung-div {
+    /*background-color: red; */
+    border-right: 1px solid;
+}
+
+.Ma-List-alterMa-div, .ueberschriften-Home-p-alter-div{
+    /* background-color: fuchsia; */
+    border-right: 1px solid;
+}

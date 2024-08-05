@@ -1,8 +1,8 @@
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; // Importiere useNavigate statt useHistory
 import { useState } from 'react';
 
 const Delete = ({ mitarbeiterId, typeOfMA }) => {
-    const history = useHistory();
+    const navigate = useNavigate(); // Verwende useNavigate statt useHistory
     const [isPending, setIsPending] = useState(false);
 
     const handleDelete = () => {
@@ -21,7 +21,7 @@ const Delete = ({ mitarbeiterId, typeOfMA }) => {
         }).then(() => {
             console.log(`${typeOfMA} deleted`);
             setIsPending(false);
-            history.push('/');
+            navigate('/'); // Verwende navigate statt history.push
         }).catch((error) => {
             console.error(`Error deleting ${typeOfMA}:`, error);
             setIsPending(false);

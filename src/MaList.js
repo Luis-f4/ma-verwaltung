@@ -15,7 +15,7 @@ const MaList = ({ mitarbeiter }) => {
                 }
 
                 return (
-                    <Link to={`/Ma/${mitarbeiterItem.id}`} key={mitarbeiterItem.id}>
+                    <Link to={`/ma-details/${mitarbeiterItem.id}`} key={mitarbeiterItem.id}>
                         <p className="Ma-List-nameMa">{mitarbeiterItem.name}</p>
                         <p className="Ma-List-alterMa">{mitarbeiterItem.age}</p>
                         <p className="Ma-List-abteilungMa">{mitarbeiterItem.abteilung}</p>

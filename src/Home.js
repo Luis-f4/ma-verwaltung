@@ -4,6 +4,7 @@ import Get from "./Get";
 const Home = () => {
 
     const { data: mitarbeiter, isPending} = Get('http://localhost:8080/api/v1/Mitarbeiter');
+    console.log(mitarbeiter);
     
     return (
         <div className="Home-div">

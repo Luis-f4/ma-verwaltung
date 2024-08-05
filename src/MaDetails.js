@@ -42,6 +42,7 @@ const MaDetails = () => {
                     abteilung={mitarbeiter?.abteilung} 
                 />
             </div>
+            
         </div>
     );
 }

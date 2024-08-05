@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import MaDetails from './MaDetails';
 
 function App() {
   return (
@@ -15,6 +16,12 @@ function App() {
             <Home />
           </Route>
           
+          /* */ 
+          <Route path="/Ma/:id">
+            <MaDetails />
+          </Route>
+          /* */
+
           <Route path="*">
              <NotFound></NotFound>
           </Route>

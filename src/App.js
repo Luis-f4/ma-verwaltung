@@ -4,6 +4,7 @@ import './index.css';
 import './Luis.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from "./Navbar"
+import Create from './Create';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/ma-details/:id" element={<MaDetails />} />
             <Route path="/ma-marketing-details/:id" element={<MaDetails />} />
+            <Route path='/create' element={<Create />} />
           </Routes>
         </div>
       </div>

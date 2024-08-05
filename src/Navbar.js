@@ -1,4 +1,5 @@
 import logo from './assets/vf-logo.png'
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     return (
@@ -11,10 +12,10 @@ export default function Navbar() {
         </a>
         <ul>
             <li className="active">
-                <a href="Home">Home</a>
+                <a href="/">Home</a>
             </li>
             <li className="active">
-                <a href="Neu">Neu</a>
+                <a href="/create">Neu</a>
             </li>
         </ul>
     </nav>

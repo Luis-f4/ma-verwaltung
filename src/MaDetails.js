@@ -26,7 +26,7 @@ const MaDetails = () => {
                     <div className="daten-ma-div">
                         <div className="name-ma-div">
                             <label className="name-ma-label">Name</label>
-                            <input className="name-ma-input" type="text" value={mitarbeiter.name} readOnly />
+                            <input className="name-ma-input" type="text" value={mitarbeiter.name}  />
                         </div>
                         <div className="dob-ma-div">
                             <label className="dob-ma-label">Date of Birth</label>
@@ -34,7 +34,7 @@ const MaDetails = () => {
                         </div>
                         <div className="abteilung-ma-div">
                             <label className="abteilung-ma-label">Abteilung</label>
-                            <input className="abteilung-ma-input" type="text" value={mitarbeiter.abteilung} readOnly />
+                            <input className="abteilung-ma-input" type="text" value={mitarbeiter.abteilung}  />
                         </div>
                         <div className="unternehmen-ma-div">
                             <label className="unternehmen-ma-label">Unternehmen</label>

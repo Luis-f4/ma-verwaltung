@@ -74,5 +74,98 @@ body {
 
 .ma-detais-div .ma-detais-title {
     font-family: Arial, sans-serif;
+    margin: 0;
+
+}
+
+.ma-detais-div .name-ma-div{
+    font-family: Arial, sans-serif;
+    margin-right: 30%;
+}
+
+.ma-detais-div .name-ma-input{
+    
+    position: absolute;
+    outline: none;
+    border-radius: 5px ;
+}
+
+.ma-detais-div .name-ma-label{
+    
+    padding: 0 25px;
+    margin: 0 22px;
+    transition: 0.2s ease;
+}
+
+.ma-detais-div .dob-ma-div {
+    font-family: Arial, sans-serif;
+    margin-right: 30%;
+   
+}
+
+.ma-detais-div .dob-ma-input{
+    
+    position: absolute;
+    outline: none;
+    border-radius: 5px ;
+}
+
+.ma-detais-div .dob-ma-label{
+    
+    padding: 0 10px;
+    margin: 0 14px;
+    transition: 0.2s ease;
+
+
+}
+
+.ma-detais-div .abteilung-ma-div {
+    font-family: Arial, sans-serif;
+    margin-right: 30%;
+}
+
+.ma-detais-div .abteilung-ma-input{
+    
+    position: absolute;
+    outline: none;
+    border-radius: 5px ;
+}
+
+.ma-detais-div .abteilung-ma-label{
+    
+    padding: 0 25px;
+    margin: 0 10px;
+    transition: 0.2s ease;
+
+
+}
+
+
+.ma-detais-div .unternehmen-ma-div {
+    font-family: Arial, sans-serif;
+    margin-right: 30%;
     
 }
+
+.ma-detais-div .unternehmen-ma-input{
+    
+    position: absolute;
+    outline: none;
+    border-radius: 5px ;
+}
+
+.ma-detais-div .unternehmen-ma-label{
+    
+    padding: 0 15px;
+    margin: 0 5px;
+    transition: 0.2s ease;
+
+
+}
+
+.UpdateButton{
+    margin: 10px;
+}
+
+
+

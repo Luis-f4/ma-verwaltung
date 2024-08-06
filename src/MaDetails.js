@@ -25,20 +25,20 @@ const MaDetails = () => {
                     <h2 className="ma-detais-title">Details</h2>
                     <div className="daten-ma-div">
                         <div className="name-ma-div">
-                            <label>Name</label>
-                            <input type="text" value={mitarbeiter.name} readOnly />
+                            <label className="name-ma-label">Name</label>
+                            <input className="name-ma-input" type="text" value={mitarbeiter.name} readOnly />
                         </div>
                         <div className="dob-ma-div">
-                            <label>Date of Birth</label>
-                            <input type="text" value={mitarbeiter.dob} readOnly />
+                            <label className="dob-ma-label">Date of Birth</label>
+                            <input className="dob-ma-input" type="text" value={mitarbeiter.dob} readOnly />
                         </div>
                         <div className="abteilung-ma-div">
-                            <label>Abteilung</label>
-                            <input type="text" value={mitarbeiter.abteilung} readOnly />
+                            <label className="abteilung-ma-label">Abteilung</label>
+                            <input className="abteilung-ma-input" type="text" value={mitarbeiter.abteilung} readOnly />
                         </div>
                         <div className="unternehmen-ma-div">
-                            <label>Unternehmen</label>
-                            <input type="text" value={mitarbeiter.unternehmenID} readOnly />
+                            <label className="unternehmen-ma-label">Unternehmen</label>
+                            <input className="unternehmen-ma-input" type="text" value={mitarbeiter.unternehmenID} readOnly />
                         </div>
                     </div>
                     <UpdateButton

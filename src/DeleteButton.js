@@ -9,7 +9,9 @@ const DeleteButton = ({ mitarbeiterId, typeOfMA }) => {
         setIsPending(true);
 
         let url = '';
-        alert("DeleteButton.js  typeOfMA: " + typeOfMA + "   DeleteButton.js  mitarbeiterId: " + mitarbeiterId);
+
+        console.log("typeOfMA: " + typeOfMA + "  mitarbeiterId: " + mitarbeiterId);
+
         if (typeOfMA === "Mitarbeiter") {
             url = `http://localhost:8080/api/v1/Mitarbeiter/${mitarbeiterId}`;
         } else if (typeOfMA === "MitarbeiterMarketing") {
@@ -18,7 +20,6 @@ const DeleteButton = ({ mitarbeiterId, typeOfMA }) => {
 
         fetch(url, {
             method: 'DELETE',
-            headers: { "Content-Type": "application/json" }
         }).then(() => {
             console.log(`${typeOfMA} deleted`);
             setIsPending(false);

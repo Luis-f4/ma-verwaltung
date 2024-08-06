@@ -9,7 +9,7 @@ const MaList = ({ mitarbeiter }) => {
 
                 if(mitarbeiterItem.typeOfMitarbeiter === "Mitarbeiter"){
                     isMitarbeiterMarketing = "ist ein Mitarbeiter";
-                    test = ''
+                    test = '';
                 } else if(mitarbeiterItem.typeOfMitarbeiter === "MitarbeiterMarketing"){
                     isMitarbeiterMarketing = "ist im Marketing";
                     test = 'marketing-';
@@ -18,24 +18,18 @@ const MaList = ({ mitarbeiter }) => {
                 }
 
                 return (
-                    
-                    <Link to={`/ma-${test}details/${mitarbeiterItem.id}`} key={mitarbeiterItem.id}>
-                        
-
+                    <Link to={`/ma-details/${mitarbeiterItem.id}/${mitarbeiterItem.typeOfMitarbeiter}`} key={mitarbeiterItem.id}>
                         <div className="Ma-List-nameMa-div info-div-maList">
-                        <p id="testtt" className="Ma-List-nameMa">{mitarbeiterItem.name}</p>
+                            <p id="testtt" className="Ma-List-nameMa">{mitarbeiterItem.name}</p>
                         </div>
-
                         <div className="Ma-List-alterMa-div info-div-maList">
-                        <p className="Ma-List-alterMa">{mitarbeiterItem.age}</p>
+                            <p className="Ma-List-alterMa">{mitarbeiterItem.age}</p>
                         </div>
-
                         <div className="Ma-List-abteilungMa-div info-div-maList">
-                        <p className="Ma-List-abteilungMa">{mitarbeiterItem.abteilung}</p>
+                            <p className="Ma-List-abteilungMa">{mitarbeiterItem.abteilung}</p>
                         </div>
-
                         <div className="Ma-List-istmarketing info-div-maList">
-                        <p className="Ma-List-istmarketing">{isMitarbeiterMarketing}</p>
+                            <p className="Ma-List-istmarketing">{isMitarbeiterMarketing}</p>
                         </div>
                     </Link>
                 );

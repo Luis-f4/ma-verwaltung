@@ -24,7 +24,7 @@ const UpdateButton = ({ mitarbeiterId, typeOfMA, abteilung }) => {
     };
 
     return (
-        <button onClick={handleUpdate} disabled={isPending}>
+        <button className="UpdateButton" onClick={handleUpdate} disabled={isPending}>
             {isPending ? 'Aktualisieren...' : 'Aktualisieren'}
         </button>
     );

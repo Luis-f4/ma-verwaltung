@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 const UpdateButton = ({ mitarbeiterId, typeOfMA, abteilung, name }) => {
     const [isPending, setIsPending] = useState(false);
     const{ typeOfMitarbeiter } = useParams();
+    const navigate = useNavigate();
 
 
     const handleUpdate = () => {
@@ -27,6 +28,7 @@ const UpdateButton = ({ mitarbeiterId, typeOfMA, abteilung, name }) => {
         }).then(() => {
             console.log(`${typeOfMA} aktualisiert`);
             setIsPending(false);
+            navigate('/'); 
         }).catch((error) => {
             console.error(`Fehler beim Aktualisieren von ${typeOfMA}:`, error);
             setIsPending(false);

@@ -34,29 +34,30 @@ const Create = () => {
         })
     }
 
+    
     return (
-        <div className="">
-            <h2>Registriere einen neuen Mitarbeiter</h2>
+        <div className="ma-create-div">
+            <h2 className="ma-create-title">Registriere einen neuen Mitarbeiter</h2>
             <form onSubmit={handleSubmit}>
-                <div className="">
-                    <div className="">
-                        <label>Name</label>
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
+                <div className="create-sub-div">
+                    <div className="create-name-ma-div">
+                        <label className="create-name-ma-label">Name</label>
+                        <input id='test' className="create-name-ma-input" type="text" value={name} onChange={(e) => setName(e.target.value)} />
                     </div>
 
-                    <div className="">
-                        <label>Date of Birth</label>
-                        <input type="text" value={dob} onChange={(e) => setDob(e.target.value)} />
+                    <div className="create-dob-ma-div">
+                        <label className="create-dob-ma-label">Date of Birth</label>
+                        <input className="create-dob-ma-input" type="text" value={dob} onChange={(e) => setDob(e.target.value)} />
                     </div>
 
-                    <div className="">
-                        <label>Abteilung</label>
-                        <input type="text" value={abteilung} onChange={(e) => setAbteilung(e.target.value)} />
+                    <div className="create-abteilung-ma-div">
+                        <label className="create-abteilung-ma-label">Abteilung</label>
+                        <input className="create-abteilung-ma-input" type="text" value={abteilung} onChange={(e) => setAbteilung(e.target.value)} />
                     </div>
 
-                    <div className="">
-                        <label>Unternehmen</label>
-                        <input type="text" value={unternehmenID} onChange={(e) => setUnternehmenID(e.target.value)} />
+                    <div className="create-unternehmen-ma-div">
+                        <label className="create-unternehmen-ma-label">Unternehmen</label>
+                        <input className="create-unternehmen-ma-input" type="text" value={unternehmenID} onChange={(e) => setUnternehmenID(e.target.value)} />
                     </div>
 
                     <select
@@ -66,8 +67,8 @@ const Create = () => {
                         <option value="MitarbeiterMarketing">MitarbeiterMarketing</option>
                     </select>
 
-                    {!isPending && <button>Create</button>}
-                    {isPending && <button disabled>Creating...</button>}
+                    {!isPending && <button className="createbutton">Create</button>}
+                    {isPending && <button className="createbutton" disabled>Creating...</button>}
                 </div>
             </form>
         </div>

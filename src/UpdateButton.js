@@ -5,6 +5,7 @@ const UpdateButton = ({ mitarbeiterId, typeOfMA, abteilung, name }) => {
     const [isPending, setIsPending] = useState(false);
     const{ typeOfMitarbeiter } = useParams();
     const navigate = useNavigate();
+    const jwtToken = localStorage.getItem('token');
 
 
     const handleUpdate = () => {
@@ -25,6 +26,10 @@ const UpdateButton = ({ mitarbeiterId, typeOfMA, abteilung, name }) => {
         setIsPending(true);
         fetch(url, {
             method: 'PUT',
+            headers: {
+                'Authorization': `Bearer ${jwtToken}`,
+                'Content-Type': 'application/json'
+            },
         }).then(() => {
             console.log(`${typeOfMA} aktualisiert`);
             setIsPending(false);

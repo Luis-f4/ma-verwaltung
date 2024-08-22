@@ -8,6 +8,7 @@ const Home = () => {
     ]);
 
     return (
+        
         <div className="Home-div">
             <div className="ueberschriften-Home">
                 <div className="ueberschriften-Home-p-div ueberschriften-Home-p-name-div">

@@ -6,6 +6,7 @@ const DeleteButton = ({ mitarbeiterId, typeOfMA }) => {
     const navigate = useNavigate(); 
     const [isPending, setIsPending] = useState(false);
     const{ typeOfMitarbeiter } = useParams();
+    const jwtToken = localStorage.getItem('token');
 
     const handleDelete = () => {
         setIsPending(true);
@@ -22,6 +23,10 @@ const DeleteButton = ({ mitarbeiterId, typeOfMA }) => {
 
         fetch(url, {
             method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${jwtToken}`,
+                'Content-Type': 'application/json'
+            },
         }).then(() => {
             console.log(`${typeOfMA} deleted`);
             setIsPending(false);

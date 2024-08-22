@@ -9,6 +9,7 @@ const Create = () => {
     const [typeMitarbeiter, setTypeMitarbeiter] = useState('Mitarbeiter');
     const [isPending, setIsPending] = useState(false);
     const navigate = useNavigate(); // Verwende useNavigate statt useHistory
+    const jwtToken = localStorage.getItem('token');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -25,7 +26,10 @@ const Create = () => {
 
         fetch(url, {
             method: 'POST',
-            headers: { "Content-Type": "application/json" },
+            headers: {
+                'Authorization': `Bearer ${jwtToken}`,
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify(maData)
         }).then(() => {
             console.log('new Mitarbeiter added');

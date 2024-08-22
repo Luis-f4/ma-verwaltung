@@ -6,12 +6,21 @@ const Get = (urls) => {
 
     useEffect(() => {
         const abortCont = new AbortController();
+        const jwtToken = localStorage.getItem('token');
+    
         const fetchData = async () => {
             try {
                 const responses = await Promise.all(urls.map(url =>
-                    fetch(url, { signal: abortCont.signal }).then(res => {
+                    fetch(url, {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${jwtToken}`,
+                            'Content-Type': 'application/json'
+                        },
+                        signal: abortCont.signal
+                    }).then(res => {
                         if (!res.ok) {
-                            throw Error('could not fetch the data for that resource');
+                            throw new Error('could not fetch the data for that resource');
                         }
                         return res.json();
                     })
@@ -24,13 +33,14 @@ const Get = (urls) => {
                 if (err.name === 'AbortError') {
                     console.log('fetch aborted');
                 } else {
+                    console.error('Fetch error:', err);
                     setIsPending(false);
                 }
             }
         };
-        
+    
         fetchData();
-
+    
         return () => abortCont.abort();
     }, [urls]);
 
